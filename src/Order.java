@@ -10,6 +10,17 @@ class Order{
         System.out.println(" enter 3 for sprite ");
         System.out.println(" enter 4 for fanta ");
 
+int total =0;
+        // create string array to store names
+
+         String [] drinks= {"pepsi","mazza","sprite","fanta"};
+
+
+        int [] prices = {90,30,15,40};
+
+
+
+
         Scanner scn = new Scanner(System.in);
 
         System.out.println(" Enter the choice :" );
@@ -25,16 +36,16 @@ class Order{
 
 
             if(choice == 1)
-            {System.out.println("pepsi -pay 20 rs " );}
+            {      total = total +prices[choice-1];} //90
 
             else if(choice == 2)
-            {System.out.println(" mazza -pay 30 rs " );}
+            { total =total+  prices[choice-1];} //30
 
             else if(choice == 3)
-            {System.out.println(" sprite -pay 15 rs " );}
+            {total =total + prices[choice-1];}// 15
 
             else if(choice == 4)
-            {System.out.println(" fanta - pay 40 rs " );}
+            {total =total + prices[choice-1];}// 40
 
             else
             {System.out.println(" enter 1 to 4 only");}
@@ -57,6 +68,7 @@ class Order{
 
         }
 
+        System.out.println("pay rs : " + total );
         System.out.println("Thanks for the purchase"  );
 
 
